@@ -20,6 +20,19 @@ public class MainActivity extends AppCompatActivity {
         // Parent method call
         super.onCreate(savedInstanceState);
 
+        /*
+        The following line displays the display_table_resource.xml file:
+
+            setContentView(R.layout.display_table_resource);
+
+        The following line displays the Java code on MainActivity:
+
+            setContentView(scrollable_root);
+
+        Lines are on line 186 and 184, make sure the one you want to view is not commented out
+
+         */
+
         // Create root layout object Scrollview
         HorizontalScrollView scrollableRoot = new HorizontalScrollView(this);
 
@@ -166,7 +179,11 @@ public class MainActivity extends AppCompatActivity {
         secondLevel.addView(bigGrid);
         firstLevel.addView(secondLevel);
         scrollableRoot.addView(firstLevel);
+
+        // 1: use this line to view table with Java
         setContentView(scrollableRoot);
+        // 2. use this line to view table with xml resource file
+        //setContentView(R.layout.display_table_resource);
     }
 
     @TargetApi(21)
